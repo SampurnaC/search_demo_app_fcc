@@ -57,6 +57,12 @@ class PostsController < ApplicationController
     end
   end
 
+
+  def search
+    key = "%#{params[:q]}%"
+    @posts = Post.where("name LIKE ? or description LIKE ?", key, key)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
