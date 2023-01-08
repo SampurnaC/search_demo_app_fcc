@@ -59,7 +59,7 @@ class PostsController < ApplicationController
 
 
   def search
-    key = "%#{params[:q]}%"
+    key = "%#{params[:key]}%"
     @posts = Post.where("name LIKE ? or description LIKE ?", key, key)
   end
 

@@ -10,6 +10,6 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     %form{action: "/search"}
-      %input{"aria-label" => "Search", placeholder: "Search for posts", name: "q", type: "text"}
+      %input{"aria-label" => "Search", placeholder: "Search for posts", name: "key", type: "text"}
       %button{type: "submit"} Search
     = yield
