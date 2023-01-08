@@ -1,15 +1,15 @@
 !!!
 %html
   %head
-    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
     %title SearchDemoAppFcc
-    %meta{content: "width=device-width,initial-scale=1", name: "viewport"}/
+    %meta{content: "width=device-width,initial-scale=1", name: "viewport"}
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     %form{action: "/search"}
-    %input{"aria-label" => "Search", placeholder: "Search for jobs", name: "q", type: "text"}/
-    %button.btn.btn-outline-success.my-2.my-sm-0{type: "submit"} Search
+      %input{"aria-label" => "Search", placeholder: "Search for posts", name: "q", type: "text"}
+      %button{type: "submit"} Search
     = yield
